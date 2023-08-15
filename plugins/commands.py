@@ -24,8 +24,8 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('📕ᴬᴮᴼᵁᵀ📕', url=f"https://t.me/{temp.U_NAME}?start=about"),
-                InlineKeyboardButton('♻️ HΞLᎮ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
+                InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+V8xo48_OzFI2OWI9"),
+                InlineKeyboardButton("2ɴᴅ ɢʀᴏᴜᴩ", url="https://t.me/dmx_chating_2_0")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -41,12 +41,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('♻️ Search Here ♻️', switch_inline_query_current_chat='')
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('ʜᴇʟᴩ', callback_data='help'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -63,12 +63,12 @@ async def start(client, message):
             return
 
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('♻️ Search Here ♻️', switch_inline_query_current_chat='')
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat='')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('ʜᴇʟᴩ', callback_data='help'),
+            InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -130,6 +130,9 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
+                    
+                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("ᴍᴀɪɴ ɢʀᴏᴜᴩ", url="https://t.me/dmx_chating")] ] ),
+                    
                     protect_content=msg.get('protect', False),
                     )
             except Exception as e:
@@ -183,12 +186,8 @@ async def start(client, message):
             await asyncio.sleep(1) 
         return await sts.delete()
         
-    buttons = [
-                    [
-                        InlineKeyboardButton('Group 1', url='https://t.me/Cinema_Talkies_Group'),
-                        InlineKeyboardButton('Group 2', url='https://t.me/CinemaCompany_Group')
-                    ]
-                    ]
+        
+
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
@@ -229,6 +228,9 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
+        
+        reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽", url="https://t.me/dmx_chating")] ] ),
+        
         protect_content=True if pre == 'filep' else False,
         )
                     
