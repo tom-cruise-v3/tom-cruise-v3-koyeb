@@ -37,7 +37,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         # Makes the bot a bit faster and also eliminates many issues realted to invite links.
         if INVITE_LINK is None:
             invite_link = (await bot.create_chat_invite_link(
-                chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL and not JOIN_REQS_DB else REQ_CHANNEL),
+                chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL or not JOIN_REQS_DB else REQ_CHANNEL),
                 creates_join_request=True if REQ_CHANNEL and JOIN_REQS_DB else False
             )).invite_link
             INVITE_LINK = invite_link
@@ -104,13 +104,13 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
 
         buttons = [
             [
-                InlineKeyboardButton("📢 Request to Join Channel 📢", url=invite_link)
+                InlineKeyboardButton("📢 ʀᴇqᴜᴇꜱᴛ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ", url=invite_link)
             ],
             [
-                InlineKeyboardButton(" 🔄 Try Again 🔄 ", callback_data=f"{mode}#{file_id}")
+                InlineKeyboardButton("👆 ᴀꜰᴛᴇʀ ʀᴇqᴜᴇꜱᴛ ᴛʀy ᴀɢᴀɪɴ", callback_data=f"{mode}#{file_id}")
             ],
-            [   InlineKeyboardButton("Groups", url="https://t.me/Group_Linkzzzz"),
-                InlineKeyboardButton("Ott Updates", url="https://t.me/Ott_UpdatezTG")
+            [   InlineKeyboardButton("ᴍᴀɪɴ ɢʀᴏᴜᴩ", url="https://t.me/dmx_chating"),
+                InlineKeyboardButton("ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+V8xo48_OzFI2OWI9")
             ]
         ]
         
