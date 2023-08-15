@@ -26,8 +26,8 @@ async def answer(bot, query: InlineQuery):
     if not await inline_users(query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='okDa',
-                           switch_pm_parameter="hehe")
+                           switch_pm_text='Poda kalla 😂🙈',
+                           switch_pm_parameter="hehe 😜")
         return
 
     if (AUTH_CHANNEL or REQ_CHANNEL) and not await is_subscribed(bot, query):
@@ -104,7 +104,7 @@ async def answer(bot, query: InlineQuery):
 def get_reply_markup(query):
     buttons = [
         [
-            InlineKeyboardButton('♻️ 𝗦𝗲𝗮𝗿𝗰𝗵 𝗔𝗴𝗮𝗶𝗻 ♻️', switch_inline_query_current_chat=query)
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴀɢᴀɪɴ', switch_inline_query_current_chat=query)
         ]
         ]
     return InlineKeyboardMarkup(buttons)
