@@ -6,10 +6,11 @@ class script(object):
     ABOUT_TXT = """✯ ᴍy ɴᴀᴍᴇ: {}
 ✯ ᴏɴᴡᴇʀ: <a href=https://t.me/basildmx>ʙᴀꜱɪʟ ᴅᴍx</a>
 ✯ ʟɪʙʀᴀʀy: ᴩyʀᴏɢʀᴀᴍ
-✯ ʟᴀɴɢᴜᴀɢᴇ: ᴩyᴛʜᴏɴ 𝟹.10.08
+✯ ʟᴀɴɢᴜᴀɢᴇ: ᴩyᴛʜᴏɴ 𝟹.10.13
 ✯ ᴅᴀᴛᴀ ʙᴀꜱᴇ: ᴍᴏɴɢᴏ ᴅʙ
 ✯ ᴅᴀᴛᴀ ʙᴀꜱᴇ 2 : ʀᴇᴅɪꜱ ᴅʙ
 ✯ ꜱᴇʀᴠᴇʀ : ʜᴇʀᴏᴋᴜ
+✯ ᴄᴩᴜ : 2ᴄᴩᴜ
 ✯ ꜱᴏᴜʀᴄᴇ : ᴇᴠᴀ ᴍᴀʀɪᴀ + ᴀᴅᴅᴇᴅ ᴄᴏᴅᴇ"""
     SOURCE_TXT = """<b>Sorry Source Code Of This Bot is Private Add This Bot in Your Group And Use Like Yours😊"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
